@@ -8,33 +8,10 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <style>
-        .demo-list-control {
-            width: 300px;
-        }
-        .page-content {
-            padding: 0px 50px
+        .mdl-navigation{
+            padding-left: 40px;
         }
     </style>
-    <script>
-
-        function addToDo(){
-            todolist.innerHTML += `
-            <li class="mdl-list__item">
-              <span class="mdl-list__item-primary-content">
-                
-                ${todofield.value}
-              </span>
-              <span class="mdl-list__item-secondary-action">
-                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="list-checkbox-1">
-                  <input type="checkbox" id="list-checkbox-1" class="mdl-checkbox__input"  />
-                </label>
-              </span>
-            </li>
-            `;
-            todofield.value = '';
-        }
-
-    </script>
 </head>
 <body>
     <!-- Always shows a header, even in smaller screens. -->
@@ -42,53 +19,55 @@
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
         <!-- Title -->
-        <span class="mdl-layout-title">To Do</span>
+        <span class="mdl-layout-title">Title</span>
         <!-- Add spacer, to align navigation to the right -->
         <div class="mdl-layout-spacer"></div>
         <!-- Navigation. We hide it in small screens. -->
         <nav class="mdl-navigation mdl-layout--large-screen-only">
-          <a class="mdl-navigation__link" href=""></a>
-          <a class="mdl-navigation__link" href=""></a>
-          <a class="mdl-navigation__link" href=""></a>
-          <a class="mdl-navigation__link" href=""></a>
         </nav>
       </div>
     </header>
     <div class="mdl-layout__drawer">
-      <span class="mdl-layout-title">To DO</span>
+      <span class="mdl-layout-title">Title</span>
       <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href=""></a>
-        <a class="mdl-navigation__link" href=""></a>
-        <a class="mdl-navigation__link" href=""></a>
-        <a class="mdl-navigation__link" href=""></a>
+        <li><a href="https://discord.gg">Discord</a></li>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
       </nav>
     </div>
     <main class="mdl-layout__content">
-      <div class="page-content">
-        <!-- Your content goes here -->
-        
-        <!-- Simple Textfield -->
-        <form onsubmit="addToDo()">
-            <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="todofield">
-            <label class="mdl-textfield__label" for="todofield">To Do hinzufgen</label>
-            </div>
-            
-                        <!-- Colored FAB button -->
-            <button type="submit" class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
-                <i class="material-icons">add</i>
-            </button>
-  
-
-        </form>
-
-        <ul class="demo-list-control mdl-list" id="todolist">
-
-        </ul>
-  
-
+        <!-- Wide card with share menu button -->
+<style>
+    .demo-card-wide.mdl-card {
+      width: 512px;
+    }
+    
+    .demo-card-wide > .mdl-card__menu {
+      color: #fff;
+    }
+    </style>
+    
+    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+      <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text">Mein Youtube</h2>
       </div>
+      <div class="mdl-card__supporting-text">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/K3CdH11Awvw?si=TOzN_bj8RLgH3DJs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+        <li><a href="https://www.youtube.com/@ClacKeyTech/videos">Youtube</a></li>
+          
+        </a>
+      </div>
+      <div class="mdl-card__menu">
+        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+          <i class="material-icons">share</i>
+        </button>
+      </div>
+    </div>
+      <div class="page-content"><!-- Your content goes here --></div>
     </main>
   </div>
+    
 </body>
 </html>
